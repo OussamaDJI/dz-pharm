@@ -18,8 +18,14 @@ Vue.use(Buefy);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
-
-const app = new Vue({
-    el: '#app'
+var app = new Vue({
+    el: '#app',
+    data: {}
 });
+
+//Navbar open dropdown
+$(document).ready(function(){
+    $('button.dropdown').hover(function(e){
+        $(this).toggleClass('is-open');
+    });
+})
