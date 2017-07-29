@@ -1,10 +1,24 @@
+
+.is-muted{
+    color: $grey-light !important;
+}
+a.is-muted:hover{
+    color: $grey !important;
+}
+
+
+
+
+
+
 .dropdown{
     position: relative;
     .dropdown-menu{
         display: none;
         position: absolute;
         left: 0;
-        top: 103%;
+        top: 80%;
+        padding: 10px 0 0 0;
         background-color: white;
         min-width: 200px;
         text-align: left;

@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar has-shadow">
+        <nav class="navbar has-shadow"> <!-- Debut navbar -->
             <div class="container">
                 <div class="nav-left">
                     <a href="{{route('home')}}" class="nav-item">
@@ -27,6 +27,9 @@
                 </div>
                 <div class="nav-right" style="overflow: visible">
                     @if(Auth::guest())
+                        <a href="{{route('login')}}" class="nav-item is-tab">Connexion</a>
+                        <a href="{{route('register')}}" class="nav-item is-tab">Enregistrement</a>
+                    @else
                         <button class="nav-item is-tab dropdown is-aligned-right">
                             Oussama DJILAH <span class="icon"><i class="fa fa-caret-down"></i></span>
                             <ul class="dropdown-menu ">
@@ -37,13 +40,10 @@
                                 <li><a href="#"><span class="icon"><i class="fa fa-fw m-r-10 fa-sign-out"></i></span>Déconnexion</a></li>
                             </ul>
                         </button>
-                    @else
-                        <a href="#" class="nav-item is-tab">Connexion</a>
-                        <a href="#" class="nav-item is-tab">Enregistrement</a>
                     @endif
                 </div>
             </div>
-        </nav>
+        </nav> <!-- Fin navbar -->
 
         @yield('content')
     </div>

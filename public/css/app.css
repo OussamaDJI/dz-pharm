@@ -3174,7 +3174,7 @@ th {
 }
 
 html {
-  background-color: #fff;
+  background-color: whitesmoke;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -5333,7 +5333,7 @@ input[type="submit"].button {
   position: relative;
   vertical-align: top;
   background-color: white;
-  border-color: #ccd0d2;
+  border-color: #dbdbdb;
   color: #363636;
   -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
           box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
@@ -5582,7 +5582,7 @@ input[type="submit"].button {
   position: relative;
   vertical-align: top;
   background-color: white;
-  border-color: #ccd0d2;
+  border-color: #dbdbdb;
   color: #363636;
   cursor: pointer;
   display: block;
@@ -13984,6 +13984,14 @@ label.panel-block:hover {
   transition: opacity 86ms ease-out, visibility 86ms ease-out;
 }
 
+.is-muted {
+  color: #b5b5b5 !important;
+}
+
+a.is-muted:hover {
+  color: #7a7a7a !important;
+}
+
 .dropdown {
   position: relative;
 }
@@ -13992,7 +14000,8 @@ label.panel-block:hover {
   display: none;
   position: absolute;
   left: 0;
-  top: 103%;
+  top: 80%;
+  padding: 10px 0 0 0;
   background-color: white;
   min-width: 200px;
   text-align: left;
