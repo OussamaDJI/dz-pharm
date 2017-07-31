@@ -14459,3 +14459,22 @@ button.nav-item.is-active {
   padding-right: 100px !important;
 }
 
+.side-menu {
+  position: absolute;
+  width: 200px;
+  background-color: white;
+  top: 4rem;
+  bottom: 0;
+}
+
+.management-area {
+  position: absolute;
+  top: 5.5rem;
+  left: 200px;
+  right: 0;
+}
+
+.flex-container {
+  margin: 10px 25px;
+}
+

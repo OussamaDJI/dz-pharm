@@ -23,7 +23,7 @@
                                 </span>
                             </p>
                             @if($errors->has('email'))
-                                  <p class="help is-danger">Le champ e-mail est obligatoire !</p>
+                                  <p class="help is-danger">{{ $errors->first('email') }}</p>
                             @endif
                         </div>
                         <!-- Fin field email  -->
@@ -38,7 +38,7 @@
                                 </span>
                             </p>
                              @if($errors->has('password'))
-                                  <p class="help is-danger">Le champs mot de passe est oblihatoire !</p>
+                                  <p class="help is-danger">{{ $errors->first('password') }}</p>
                             @endif
                         </div>
                         <!-- Fin field password  -->

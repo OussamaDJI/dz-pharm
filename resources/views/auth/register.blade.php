@@ -24,7 +24,7 @@
                                 <input class="input {{$errors->has('email') ? 'is-danger' : ''}}" type="text" name="email" id="email" placeholder="nom@exemple.com" value="{{old('email')}}">
                             </p>
                             @if($errors->has('email'))
-                                  <p class="help is-danger">Le champ e-mail est obligatoire !</p>
+                                  <p class="help is-danger">{{ $errors->first('email') }}</p>
                             @endif
                         </div>
                         <!-- Fin field email  -->
@@ -33,12 +33,12 @@
                            <div class="column">
                                 <!-- Debut field Nom / Last name  -->
                                 <div class="field">
-                                    <label for="last-name" class="label">Nom <i class="has-text-danger">(*)</i></label>
+                                    <label for="last_name" class="label">Nom <i class="has-text-danger">(*)</i></label>
                                     <p class="control">
-                                        <input class="input {{$errors->has('last-name') ? 'is-danger' : ''}}" type="text" name="last-name" id="last-name" value="{{old('last-name')}}">
+                                        <input class="input {{$errors->has('last_name') ? 'is-danger' : ''}}" type="text" name="last_name" id="last_name" value="{{old('last_name')}}">
                                     </p>
-                                    @if($errors->has('last-name'))
-                                        <p class="help is-danger">Le champ nom est obligatoire !</p>
+                                    @if($errors->has('last_name'))
+                                        <p class="help is-danger"{{ $errors->first('last_name') }}</p>
                                     @endif
                                 </div>
                                 <!-- Fin field Nom / Last name  -->
@@ -47,12 +47,12 @@
                            <div class="column">
                                <!-- Debut field Prénom / First name  -->
                                <div class="field">
-                                   <label for="first-name" class="label">Prénom <i class="has-text-danger">(*)</i></label>
+                                   <label for="first_name" class="label">Prénom <i class="has-text-danger">(*)</i></label>
                                    <p class="control">
-                                       <input class="input {{$errors->has('first-name') ? 'is-danger' : ''}}" type="text" name="first-name" id="first-name" value="{{old('first-name')}}">
+                                       <input class="input {{$errors->has('first_name') ? 'is-danger' : ''}}" type="text" name="first_name" id="first_name" value="{{old('first_name')}}">
                                    </p>
-                                   @if($errors->has('first-name'))
-                                         <p class="help is-danger">Le champ prénom est obligatoire !</p>
+                                   @if($errors->has('first_name'))
+                                         <p class="help is-danger">{{ $errors->first('first_name') }}</p>
                                    @endif
                                </div>
                                <!-- Fin field Prénom / First name  -->
@@ -66,7 +66,7 @@
                                 <input class="input {{$errors->has('compagnie') ? 'is-danger' : ''}}" type="text" name="compagnie" id="compagnie" value="{{old('compagnie')}}">
                             </p>
                             @if($errors->has('compagnie'))
-                                  <p class="help is-danger">Le champ Compagnie est obligatoire !</p>
+                                  <p class="help is-danger">{{ $errors->first('compagnie') }}</p>
                             @endif
                         </div>
                         <!-- Fin field Companie  -->
@@ -78,7 +78,7 @@
                                 <input class="input {{$errors->has('adresse') ? 'is-danger' : ''}}" type="text" name="adresse" id="adresse" value="{{old('adresse')}}">
                             </p>
                             @if($errors->has('adresse'))
-                                  <p class="help is-danger">Le champ adresse est obligatoire !</p>
+                                  <p class="help is-danger">{{ $errors->first('adresse') }}</p>
                             @endif
                         </div>
                         <!-- Fin field adresse  -->
@@ -90,7 +90,7 @@
                                 <input class="input {{$errors->has('wilaya') ? 'is-danger' : ''}}" type="text" name="wilaya" id="wilaya" value="{{old('wilaya')}}">
                             </p>
                             @if($errors->has('wilaya'))
-                                  <p class="help is-danger">Le champ wilaya est obligatoire !</p>
+                                  <p class="help is-danger">{{ $errors->first('wilaya') }}</p>
                             @endif
                         </div>
                         <!-- Fin field wilaya  -->
@@ -102,7 +102,7 @@
                                 <input class="input {{$errors->has('commune') ? 'is-danger' : ''}}" type="text" name="commune" id="commune" value="{{old('commune')}}">
                             </p>
                             @if($errors->has('commune'))
-                                  <p class="help is-danger">Le champ commune est obligatoire !</p>
+                                  <p class="help is-danger">{{ $errors->first('commune') }}</p>
                             @endif
                         </div>
                         <!-- Fin field commune  -->
@@ -114,7 +114,7 @@
                                 <input class="input {{$errors->has('phone') ? 'is-danger' : ''}}" type="text" name="phone" id="phone" value="{{old('phone')}}">
                             </p>
                             @if($errors->has('phone'))
-                                  <p class="help is-danger">Le champ tél est obligatoire !</p>
+                                  <p class="help is-danger">{{ $errors->first('phone') }}</p>
                             @endif
                         </div>
                         <!-- Fin field tel  -->
@@ -128,7 +128,7 @@
                                         <input class="input {{$errors->has('password') ? 'is-danger' : ''}}" type="password" name="password" id="password">
                                     </p>
                                      @if($errors->has('password'))
-                                          <p class="help is-danger">Le champs mot de passe est obligatoire !</p>
+                                          <p class="help is-danger">{{ $errors->first('password') }}</p>
                                     @endif
                                 </div>
                                 <!-- Fin field password  -->
@@ -143,7 +143,7 @@
                                         <input class="input {{$errors->has('confirm-password') ? 'is-danger' : ''}}" type="password" name="confirm-password" id="confirm-password">
                                     </p>
                                      @if($errors->has('confirm-password'))
-                                          <p class="help is-danger">Le champs confirmation mot de passe est obligatoire !</p>
+                                          <p class="help is-danger">{{ $errors->first('confirm-password') }}</p>
                                     @endif
                                 </div>
                                 <!-- Fin field confirm password  -->
