@@ -44,7 +44,9 @@
                         <!-- Fin field password  -->
 
                         <!-- Checkbox remember me  -->
-                        <b-checkbox name="remember" class="m-t-20">Se souvenir de moi</b-checkbox>
+                        <div class="field">
+                            <b-checkbox name="remember" class="m-t-20">Se souvenir de moi</b-checkbox>
+                        </div>
 
                         <!-- Login button  -->
                         <button class="button is-primary is-outlined is-fullwidth m-t-20">Se connecter</button>
@@ -59,4 +61,14 @@
     </div>
 </div>
 
+@endsection
+@section('scripts')
+<script>
+     var app = new Vue({
+     el: '#app',
+     data:{
+
+     }
+ });
+</script>
 @endsection

@@ -190,9 +190,7 @@
             el: '#app',
             data: {
                 password_options: 'keep',
-
-
             }
-        })
-</script>
+        });
+    </script>
 @endsection
