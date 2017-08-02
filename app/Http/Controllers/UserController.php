@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Hash;
 use Session;
-
+use App\Role;
 class UserController extends Controller
 {
     /**
@@ -97,7 +97,7 @@ class UserController extends Controller
     public function show($id)
     {
         //
-        $user = User::findOrFail($id);
+        $user = User::where('id',$id)->with('roles')->first();
         return view('manage.users.show')->with('user',$user);
     }
 
@@ -110,8 +110,9 @@ class UserController extends Controller
     public function edit($id)
     {
         //
-        $user = User::findOrFail($id);
-        return view('manage.users.edit')->with('user', $user);
+        $roles = Role::all();
+        $user = User::where('id',$id)->with('roles')->first();
+        return view('manage.users.edit')->with('user', $user)->with('roles',$roles);
     }
 
     /**
@@ -163,12 +164,16 @@ class UserController extends Controller
             $user->password = Hash::make($password);
         }
 
-        if($user->save()){
-            return redirect()->route('users.show',$id);
-        }else{
-            Session::flash('danger', 'Désolé un problème est survenu, veuillez re-essayer plus tard !');
-            return redirect()->route('users.edit',$id);
-        }
+        $user->save();
+        $user->SyncRoles(explode(',',$request->roles));
+
+        return redirect()->route('users.show',$id);
+        // if(){
+            
+        // }else{
+        //     Session::flash('danger', 'Désolé un problème est survenu, veuillez re-essayer plus tard !');
+        //     return redirect()->route('users.edit',$id);
+        // }
 
         
     }

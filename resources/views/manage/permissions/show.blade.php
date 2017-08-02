@@ -4,7 +4,7 @@
     <div class="flex-container">
         <div class="columns">
             <div class="column">
-                <h1 class="title"> Informations sur l'utilisateur </h1>
+                <h1 class="title"> Informations sur la Permission </h1>
             </div>
             <div class="column">
                 <a href="{{route('permissions.edit',$permission->id)}}" class="button is-primary is-pulled-right"><i class="fa fa-pencil m-r-10"></i>Modifier informations</a>

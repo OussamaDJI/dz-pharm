@@ -25,7 +25,6 @@
                                 <th>E-mail</th>
                                 <th>Date création</th>
                                 <th> </th>
-                                <th> </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,8 +35,10 @@
                                     <td>{{$user->last_name}}</td>
                                     <td>{{$user->email}}</td>
                                     <td>{{$user->created_at->toFormattedDateString()}}</td>
-                                    <td><a class="button is-outlined" href="{{route('users.edit', $user->id)}}"><i class="fa fa-pencil m-r-10"></i>Modifier</a></td>                        
-                                    <td><a class="button is-outlined" href="{{route('users.show', $user->id)}}"><i class="fa fa-eye m-r-10"></i>Consulter</a></td>                        
+                                    <td class="has-text-right"> 
+                                        <a class="button is-outlined" href="{{route('users.edit', $user->id)}}"><i class="fa fa-pencil m-r-10"></i>Modifier</a>                       
+                                        <a class="button is-outlined" href="{{route('users.show', $user->id)}}"><i class="fa fa-eye m-r-10"></i>Consulter</a>
+                                    </td>                        
                                 </tr>
                             @endforeach
                         </tbody>

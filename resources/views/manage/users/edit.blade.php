@@ -169,6 +169,22 @@
                                         <!-- Fin field confirm password  -->
                                     </div>
                                 </div>
+
+                                <!-- Roles field  -->
+                                <input :value="selectedRoles" type="hidden" name="roles">
+                                <div class="field">
+                                    <label for="" class="label">Roles</label>
+                                    
+                                    <b-checkbox-group v-model="selectedRoles">
+                                        @foreach($roles as $r)
+                                        <div class="field">
+                                            <b-checkbox :custom-value="{{$r->id}}">{{$r->display_name}} ({{$r->name}})</b-checkbox>
+                                        </div>                                       
+                                        @endforeach
+                                    </b-checkbox-group>    
+                                  
+                                
+                                </div>
                     
                     
                                 <!-- Register button  -->
@@ -190,6 +206,7 @@
             el: '#app',
             data: {
                 password_options: 'keep',
+                selectedRoles: {!!$user->roles->pluck('id')!!}
             }
         });
     </script>

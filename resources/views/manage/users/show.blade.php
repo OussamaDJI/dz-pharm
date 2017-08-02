@@ -22,7 +22,16 @@
                         <p class="subtitle"><b>Wilaya: </b>{{$user->wilaya}} </p>
                         <p class="subtitle"><b>Commune: </b>{{$user->commune}} </p>
                         <p class="subtitle"><b>Tél: </b>{{$user->phone}} </p>
-
+                        <p class="subtitle"><b>Roles:</b> 
+                        {{$user->roles->count() == 0 ? 'Cet utilisateur n\'a pas de role spécifique!' : ''}}
+                            <ul>
+                                @foreach($user->roles as $role)
+                                    <li>
+                                        - {{$role->display_name}} ({{$role->description}})
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
